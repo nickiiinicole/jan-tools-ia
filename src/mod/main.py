@@ -1,8 +1,7 @@
 import math
 from fastmcp import FastMCP
 
-# Se crea la instancia del servidor [cite: 28]
-mcp = FastMCP("Calculadora_Avanzada")
+mcp = FastMCP("Calculadora Nicki NIcole < 3")
 
 @mcp.tool()
 def sumar(a: float, b: float) -> float:
@@ -27,5 +26,4 @@ def raiz_cuadrada(a: float) -> float:
     return math.sqrt(a)
 
 if __name__ == "__main__":
-    # Esto lanza el servidor en modo stdio [cite: 41, 42]
-    mcp.run()
+    mcp.run(transport="http", host="0.0.0.0", port=3355)
